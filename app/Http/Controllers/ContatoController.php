@@ -12,25 +12,9 @@ class ContatoController extends Controller
     }
     
     public function processaContato(Request $request){
-
-        /*
-        echo '<pre>';
-        print_r($request->all());
-        echo '</pre>';
-        echo $request->input('nome');
-        echo '<br>';
-        echo $request->input('email');
-        */
-        
-
-
-        //var_dump($request->input('telefone'));
-
-
-        
-
+                
         $contato = new SiteContato();
-        $contato->nome = $request->input('nome');
+        $contato->nome = $request->input('nome_');
         $contato->telefone = $request->input('telefone');
         $contato->email = $request->input('email');
         $contato->motivo_contato = $request->input('motivo_contato');
